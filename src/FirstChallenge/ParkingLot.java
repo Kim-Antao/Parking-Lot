@@ -40,7 +40,7 @@ public class ParkingLot {
                 }
             }
 
-            if (vehicle.getType().equals("Car") && spot.isAvailable()){
+            if (vehicle.getType().equals("Van") && spot.isAvailable()){
                 if( spot.getSize().equals(ParkingSpotSize.LARGE.name())){
                     spot.parkVehicle();
                     System.out.printf("Vehicle No: %s has been parked at spot %d \n", vehicle.getVehicleId(), spot.getSpotNumber());
@@ -76,6 +76,35 @@ public class ParkingLot {
             }
         }
         return counter;
+    }
+
+    public void checkIfSpotTypeFilled(){
+        boolean motorcycleSpotAvailable = false;
+        boolean compactSpotAvailable = false;
+        boolean largeSpotAvailable = false;
+
+        for(ParkingSpot spot: parkingSpotList){
+            if(spot.isAvailable()){
+                if(spot.getSize().equalsIgnoreCase("Motorcycle")){
+                    motorcycleSpotAvailable = true;
+                }else if(spot.getSize().equalsIgnoreCase("compact")){
+                    compactSpotAvailable = true;
+                }else if(spot.getSize().equalsIgnoreCase("large")){
+                    largeSpotAvailable = true;
+                }
+            }
+
+        }
+
+        if(!motorcycleSpotAvailable){
+            System.out.println("Motorcyle spots are full");
+        }
+        if(!compactSpotAvailable){
+            System.out.println("Compact spots are full");
+        }
+        if(!largeSpotAvailable){
+            System.out.println("large spots are full");
+        }
     }
 
 }

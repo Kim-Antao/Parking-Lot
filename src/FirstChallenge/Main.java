@@ -51,8 +51,11 @@ public class Main {
             else if(filledSpots == 0){
                 System.out.println("Parking lot is empty.");
             }else{
-                System.out.printf("There are %d slots remaining.\n", (totalSpots - filledSpots));
+                System.out.printf("\nThere are %d slots remaining.\n", (totalSpots - filledSpots));
             }
+
+            park1.checkIfSpotTypeFilled();
+
             System.out.println("\n--MENU--");
             System.out.println("1. Park a vehicle \n" +
                                 "2. Remove a vehicle \n" +
