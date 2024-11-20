@@ -4,9 +4,9 @@ import java.util.Arrays;
 import java.util.Scanner;
 
 
-/*
+/*  PENDING
 * Van takes 3 compact spots
-* print when certain spots are filled
+*
 * print how many vans are present
 * */
 
@@ -70,13 +70,7 @@ public class Main {
                     System.out.println("Choose the type of vehicle");
                     System.out.println("1. Motorcycle \n2. Car \n3. Van");
                     vehicleType = scanner.nextInt();
-
-//                    if(!vehicleType.equalsIgnoreCase("motorcycle")||!vehicleType.equalsIgnoreCase( "car")|| !vehicleType.equalsIgnoreCase("van"))
-//                    System.out.println("Enter the size");
-//                    vehicleSize = scanner.nextLine();
-
                     park1.parkVehicle(new Vehicle(vehicleNumber, vehicleTypeList[vehicleType-1]));
-
                     break;
 
                 case 2:

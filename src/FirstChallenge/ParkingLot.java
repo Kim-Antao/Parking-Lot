@@ -12,18 +12,6 @@ public class ParkingLot {
     public void parkVehicle(Vehicle vehicle){
 
         for(ParkingSpot spot: parkingSpotList){
-//            if (spot.isAvailable())
-////             Check if the parking spot, same size as that of the vehicle is free
-////                if( spot.getSize().equalsIgnoreCase(vehicle.getSize())){
-//                if(vehicle.getType().equalsIgnoreCase("motorcyle")){
-//
-//                    spot.parkVehicle();
-//                    System.out.printf("Vehicle No: %s has been parked at spot %d \n", vehicle.getVehicleId(), spot.getSpotNumber());
-////                System.out.println(vehicle.getSize());
-//                    return;
-//                }
-//              motorcyle and car can park in large spots
-
             if(vehicle.getType().equals("Motorcycle")){
                 if(spot.isAvailable()){
                     spot.parkVehicle();
@@ -47,7 +35,6 @@ public class ParkingLot {
                     return;
                 }
             }
-
 
         }
         System.out.println("No spots available");
